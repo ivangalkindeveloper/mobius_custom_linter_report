@@ -1,0 +1,25 @@
+name: example
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^8.1.4
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^8.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  custom_lint: ^0.7.0
+  mobius_custom_linter_report:
+    path: ../
+
+flutter:
+  uses-material-design: true

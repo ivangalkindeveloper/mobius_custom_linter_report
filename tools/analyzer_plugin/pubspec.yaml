@@ -1,0 +1,11 @@
+name: analyzer_plugin_linter
+description: Linter using analyzer_plugin
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  mobius_custom_linter_report:
+    path: ../../
