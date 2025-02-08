@@ -77,7 +77,6 @@ class CustomLintDeleteBlocCubitDependsFlutterRule extends DartLintRule {
               }
 
               if (_validate(
-                    type: parameterElement.type,
                     packageName:
                         parameterElement.type.element?.library?.identifier,
                   ) ==
@@ -103,7 +102,6 @@ class CustomLintDeleteBlocCubitDependsFlutterRule extends DartLintRule {
                   }
 
                   if (_validate(
-                        type: staticType,
                         packageName: staticType.element?.library?.identifier,
                       ) ==
                       false) {
@@ -129,7 +127,6 @@ class CustomLintDeleteBlocCubitDependsFlutterRule extends DartLintRule {
               }
 
               if (_validate(
-                    type: variableElement.type,
                     packageName:
                         variableElement.type.element?.library?.identifier,
                   ) ==
@@ -147,22 +144,12 @@ class CustomLintDeleteBlocCubitDependsFlutterRule extends DartLintRule {
       );
 
   bool _validate({
-    required DartType? type,
     required String? packageName,
-  }) {
-    if (packageName == null) {
-      return false;
-    }
-
-    if (packageName.startsWith(
-          "package:flutter",
-        ) ==
-        false) {
-      return false;
-    }
-
-    return true;
-  }
+  }) =>
+      (packageName?.startsWith(
+            "package:flutter/",
+          ) ??
+          false);
 
   @override
   List<Fix> getFixes() => [

@@ -27,7 +27,7 @@ class _ExampleLinter extends PluginBase {
     CustomLintConfigs configs,
   ) =>
       const [
-        // Перекчиляем написанные правила
+        // Перечисляем написанные правила
         CustomLintClassDeletePostfixRule(),
         CustomLintDeleteBlocCubitDependsFlutterRule(),
       ];

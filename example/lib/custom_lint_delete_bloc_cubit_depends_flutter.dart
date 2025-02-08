@@ -1,7 +1,6 @@
 //ignore_for_file: unused_field, edit_constructor_public_named_parameter, delete_bloc_cubit_public_property
-
-import 'package:flutter/material.dart';
 import 'package:bloc/bloc.dart';
+import 'package:flutter/material.dart';
 
 class Example1Bloc extends Bloc<String, String> {
   Example1Bloc(
@@ -14,7 +13,7 @@ class Example1Bloc extends Bloc<String, String> {
     // expect_lint: custom_lint_delete_bloc_cubit_depends_flutter
   })  : _textEditingController = textEditingController,
         super(
-          "",
+          '',
         );
 
   // expect_lint: custom_lint_delete_bloc_cubit_depends_flutter
@@ -23,4 +22,9 @@ class Example1Bloc extends Bloc<String, String> {
   final TextEditingController _textEditingController;
   // expect_lint: custom_lint_delete_bloc_cubit_depends_flutter
   final ScrollController scrollController;
+
+  void doSomething() {
+    // ignore: avoid_print, prefer_single_quotes
+    print("Hello World!");
+  }
 }

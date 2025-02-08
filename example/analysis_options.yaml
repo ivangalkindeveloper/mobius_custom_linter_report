@@ -1,10 +1,15 @@
-include: package:flutter_lints/flutter.yaml
+# include: package:flutter_lints/flutter.yaml
+include: package:surf_lint_rules/analysis_options.yaml
 
 analyzer:
   plugins:
-    # - mobius_custom_linter_report
     - custom_lint
 
 custom_lint:
   debug: true
   verbose: true
+  # enable_all_lint_rules: false
+  # rules:
+  #   - my_lint_rule_0: false
+  #   - my_lint_rule_1:
+  #     some_parameter: "some value"
